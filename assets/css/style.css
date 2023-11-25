@@ -1,0 +1,240 @@
+/* @import "dark.css" screen and (prefers-color-scheme: dark); */
+*:not(html) {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box
+}
+html {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%
+}
+a {
+  -webkit-text-decoration: none;
+          text-decoration: none
+}
+button, .btn {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none
+}
+img { display: block }
+.container {
+  width: min(calc(95% - 41.25px) , 1280px);
+  margin-inline: auto;
+}
+.row     { display: flex }
+.between { justify-content: space-between }
+.ycenter { align-items: center }
+header .container { height: 100px }
+@media (min-width: 768px) { header .container { height: 80px } }
+header .container h1 { font-weight: 800 }
+@media (min-width: 768px) { header .container h1 { font-size: 1.75rem } }
+.theme {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-moon' viewBox='0 0 16 16'%3E%3Cpath d='M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278M4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat no-repeat;
+  background-position: 0 center;
+  padding-left: 25px
+}
+html[data-dark] .theme {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-moon-fill' viewBox='0 0 16 16'%3E%3Cpath d='M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278'/%3E%3C/svg%3E")
+}
+@media (max-width: 992px) {
+  .controls {
+    flex-direction: column;
+    align-items: flex-start
+  }
+}
+.controls {
+  margin: 50px 0;
+}
+.form-search {
+  width: min(100%, 440px);
+  height: 55px;
+}
+#quest {
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px 20px 74px;
+  border-radius: 0.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/%3E%3C/svg%3E");
+  background-repeat: no-repeat no-repeat;
+  background-position: 39px center;
+  caret-color: currentColor;
+}
+html[data-dark] #quest {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/%3E%3C/svg%3E")
+}
+#quest::placeholder {
+  color: currentColor;
+}
+.region-box { position: relative }
+@media (max-width: 991px) { .region-box { margin-top: 80px } }
+#region {
+  width: 200px;
+  height: 55px;
+  border-radius: 0.5rem;
+  padding: 20px;
+  text-align: start;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat no-repeat;
+  background-position: calc(100% - 20px) center;
+}
+html[data-dark] #region {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+#regionlist {
+  list-style: none;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: calc(100% + 5px);
+  left: 0;
+  padding: 0 20px;
+  border-radius: 0.5rem;
+  display: none;
+}
+#regionlist.active { display: block }
+#regionlist li a {
+  display: block;
+  margin: 11.5px 0;
+}
+.countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+  gap: calc((1280px - (264px * 4)) / 3);
+}
+.countries .country {
+  height: 358px;
+  border-radius: 0.5rem;
+}
+.countries .country img {
+  width: 100%;
+  height: 160px;
+  border-radius: 0.4rem 0.4rem 0 0;
+  background-color: currentColor;
+}
+.countries .country .text {
+  padding: 25px;
+}
+.countries .country .text h3 {
+  margin: 1rem 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.countries .country .text p {
+  margin: 0.5rem 0;
+}
+b {
+  font-weight: bold;
+}
+#_detail {
+  position: absolute;
+  inset: 80px 0 0;
+  z-index: 100;
+  overflow: auto;
+  font-size: 16px;
+}
+#back {
+  display: block;
+  height: 40px;
+  width: 140px;
+  margin: 80px;
+  border-radius: 0.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-arrow-left' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8'/%3E%3C/svg%3E");
+  background-repeat: no-repeat no-repeat;
+  background-position: 30px center;
+}
+html[data-dark] #back {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-arrow-left' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8'/%3E%3C/svg%3E");
+}
+@media (max-width: 921px) { #back { margin-bottom: 125px } }
+#country_info .flag {
+  width: min(100%, 560px);
+  height: 400px;
+  margin: 0 auto;
+}
+#country_info h2 {
+  font-size: 2.75rem;
+  font-weight: bold;
+  margin: 30px 0;
+}
+#country_info p {
+  margin: 1rem 0;
+}
+#country_info .border {
+  margin-top: 75px;
+  display: block;
+}
+#country_info .border a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+  margin: 10px;
+}
+@media (max-width: 991px) {
+  #_detail .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #country_info > div {
+    margin: 0 !important;
+  }
+  #back {
+    margin-left: 0;
+  }
+}
+
+
+
+header {
+  box-shadow: 0 10px 10px 0#f3f3f3;
+  position: relative;
+  z-index: 1000;
+}
+#quest, #region, #back, #country_info .border a  {
+  box-shadow: 0 0 15px 10px#f2f2f2;
+}
+#regionlist {
+  background-color: white;
+}
+#regionlist a:active, #regionlist a:hover {
+  background-color: #17f;
+  color: white;
+}
+#_detail {
+  background-color: #fff;
+}
+html[data-dark] body {
+  background-color: #202d36;
+  color: #fff;
+}
+html[data-dark] .country {
+  background-color: #2b3743;
+}
+html[data-dark] :is(header, #quest, #region, #back, #regionlist, #country_info .border a) {
+  background-color: #2b3743;
+  box-shadow: none;
+}
+html[data-dark] #_detail {
+  background-color: #202d36;
+}
+/* 
+html[data-dark]
+html[data-dark]
+html[data-dark]
+*/
