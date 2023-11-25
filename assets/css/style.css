@@ -131,7 +131,7 @@ html[data-dark] #region {
 .countries .country .text {
   padding: 25px;
 }
-.countries .country .text h3 {
+.countries .country .text h2 {
   margin: 1rem 0;
   font-weight: bold;
   font-size: 1.5rem;
