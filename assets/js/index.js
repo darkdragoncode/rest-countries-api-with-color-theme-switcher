@@ -22,7 +22,7 @@
       return `<a href='javascript:detail("${obj.name}")' class="country">
   <img src="${obj.flags.png}" alt="${obj.name}">
   <div class="text">
-    <h3>${obj.name}</h3>
+    <h2>${obj.name}</h2>
     <p><b>Population: </b>${obj.population}</p>
     <p><b>Region: </b>${obj.region}</p>
     <p><b>Capital: </b>${obj.capital || 'None'}</p>
